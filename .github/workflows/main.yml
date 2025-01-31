@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano Bot</title>
+</head>
+<body>
+  <h1>Piano Bot</h1>
+  <div id="content">
+    <p>Welcome to the Piano Bot! Learn about chords, scales, and more!</p>
+    <button onclick="showInfo('Cmajor')">Learn C Major Chord</button>
+    <button onclick="showInfo('Gmajor')">Learn G Major Chord</button>
+    <button onclick="showInfo('Aminor')">Learn A Minor Chord</button>
+    <button onclick="showInfo('majorScale')">Learn Major Scale</button>
+    <button onclick="showInfo('minorScale')">Learn Minor Scale</button>
+  </div>
+  
+  <script>
+    // Function to display information about the chord, scale, etc.
+    function showInfo(option) {
+      let info;
+
+      if (option === 'Cmajor') {
+        info = "C Major Chord: C, E, G";
+      } else if (option === 'Gmajor') {
+        info = "G Major Chord: G, B, D";
+      } else if (option === 'Aminor') {
+        info = "A Minor Chord: A, C, E";
+      } else if (option === 'majorScale') {
+        info = "Major Scale Pattern: W-W-H-W-W-W-H (W = Whole Step, H = Half Step). Example: C major: C, D, E, F, G, A, B, C.";
+      } else if (option === 'minorScale') {
+        info = "Minor Scale Pattern: W-H-W-W-H-W-W. Example: A minor: A, B, C, D, E, F, G, A.";
+      }
+
+      // Display the information to the user
+      document.getElementById("content").innerHTML = "<h2>Information:</h2><p>" + info + "</p>";
+    }
+  </script>
+</body>
+</html>
